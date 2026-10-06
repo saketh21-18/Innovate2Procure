@@ -1,22 +1,43 @@
+<<<<<<< HEAD
 # Innovate2Procure
 
-Startup-friendly innovation procurement prototype for government departments.
+A startup-friendly innovation procurement prototype for government departments.
 
-## Vercel deployment
+## Features
+- Premium SaaS-style landing page matching the project UI mockups
+- Government dashboard
+- Login / registration with name, email, department and role
+- Host/Admin dashboard that receives submitted participant details
+- SQLite persistence
+- Innovation workflow: Define → Discover → Evaluate → Pilot → Prove → Scale
+- Responsive interface
 
-The project uses `api/index.py` as the Vercel Python entry point and routes all requests to the Flask application.
+## Tech Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Python + Flask
+Database: SQLite
 
-The prototype uses SQLite. On Vercel, SQLite is stored under `/tmp` because the deployed filesystem is ephemeral. This is suitable for a demo but not for permanent production data. Use a hosted PostgreSQL database for real deployment.
-
-## Local run
+## Run locally
 
 ```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
 
-The existing `templates/` and `static/` folders are required.
+Open http://127.0.0.1:5000
 
-## Security
+## Host demo
 
-This is a college-project prototype. Before collecting real personal or government data, add proper authentication, protected admin access, HTTPS, production database, audit logging, privacy/retention controls and security review.
+Choose `Host / Admin` during login. Every submitted participant is saved in `innovate2procure.db` and shown in the Host Overview.
+
+## Important
+
+This is a college-project prototype. For real deployment, use proper authentication/password hashing or SSO, HTTPS, role-based permissions, a production database, audit logging, privacy/retention controls and security review before collecting real personal or government data.
+=======
+# Innovate2Procure
+>>>>>>> 691c8f115d095737147494a8f47b120824be5d56
