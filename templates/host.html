@@ -1,0 +1,24 @@
+{% extends 'base.html' %}{% block body %}
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="side-brand"><span class="logo">✦</span><b>Innovate2Procure</b></div>
+  <a class="active">⌂ Host Overview</a><a>◉ Participants</a><a>▣ Departments</a><a>▤ Activity</a>
+  <div class="side-bottom"><a href="{{url_for('logout')}}">↪ Logout</a></div>
+</aside>
+<main class="main">
+  <header class="topbar"><div><h1>Host Overview</h1><p>View participant information submitted through the platform.</p></div><div class="profile">HOST / ADMIN</div></header>
+  <div class="metric-grid large">
+    <div><small>Total Participants</small><strong>{{users|length}}</strong><em>Live database</em></div>
+    <div><small>Departments</small><strong>{{users|map(attribute='department')|unique|list|length}}</strong><em>Registered</em></div>
+    <div><small>Government Users</small><strong>{{users|selectattr('role','equalto','department')|list|length}}</strong><em>Department access</em></div>
+    <div><small>Startups</small><strong>{{users|selectattr('role','equalto','startup')|list|length}}</strong><em>Startup access</em></div>
+  </div>
+  <section class="panel"><div class="panel-head"><h2>Participant Details</h2><span>Newest first</span></div>
+    <div class="table-wrap"><table><thead><tr><th>Name</th><th>Email</th><th>Department / Organisation</th><th>Role</th><th>Joined</th></tr></thead><tbody>
+    {% for u in users %}<tr><td><b>{{u['name']}}</b></td><td>{{u['email']}}</td><td>{{u['department']}}</td><td><span class="tag">{{u['role']}}</span></td><td>{{u['created_at']}}</td></tr>
+    {% else %}<tr><td colspan="5">No participants yet.</td></tr>{% endfor %}
+    </tbody></table></div>
+  </section>
+  <p class="tiny">Prototype note: for public deployment, add real authentication, HTTPS, role-based permissions, secure database hosting, audit logging and privacy controls before collecting real personal or government data.</p>
+</main></div>
+{% endblock %}
