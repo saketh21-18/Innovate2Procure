@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Innovate2Procure
 
 A startup-friendly innovation procurement prototype for government departments.
@@ -37,3 +38,6 @@ Choose `Host / Admin` during login. Every submitted participant is saved in `inn
 ## Important
 
 This is a college-project prototype. For real deployment, use proper authentication/password hashing or SSO, HTTPS, role-based permissions, a production database, audit logging, privacy/retention controls and security review before collecting real personal or government data.
+=======
+# Innovate2Procure
+>>>>>>> 691c8f115d095737147494a8f47b120824be5d56
