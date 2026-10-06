@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% block body %}
+<div class="app-shell">
+<aside class="sidebar">
+  <div class="side-brand"><span class="logo">✦</span><b>Innovate2Procure</b></div>
+  <a class="active">⌂ Dashboard</a><a>▣ Challenges</a><a>◉ Startups</a><a>✓ Evaluations</a><a>⚗ Pilots</a><a>▤ Procurement</a><a>◫ Reports</a>
+  <div class="side-bottom"><a>⚙ Settings</a><a href="{{url_for('logout')}}">↪ Logout</a></div>
+</aside>
+<main class="main">
+  <header class="topbar"><div><h1>Welcome back, {{name}} 👋</h1><p>Here's what's happening with innovation in your department.</p></div><div class="profile">{{department}} <span>⌄</span></div></header>
+  <div class="metric-grid large">
+    <div><small>Active Challenges</small><strong>05</strong><em>+2 this month</em></div>
+    <div><small>Startup Applications</small><strong>42</strong><em>+12 this week</em></div>
+    <div><small>Ongoing Pilots</small><strong>03</strong><em>+1 this month</em></div>
+    <div><small>Ready for Procurement</small><strong>01</strong><em>Ready to scale</em></div>
+  </div>
+  <div class="banner"><div><b>Turn departmental challenges into innovative solutions</b><span>Create a new challenge and discover startups solving real-world problems.</span></div><button class="btn primary">+ Create New Challenge</button></div>
+  <div class="content-grid">
+    <section class="panel"><div class="panel-head"><h2>Active Innovation Challenges</h2><span>View all →</span></div>
+      <div class="challenge-cards">
+        <div class="challenge"><b>Smart Water Leak Detection</b><small>Water Resources</small><em>Pilot Phase</em><div class="steps">●—●—●—○</div></div>
+        <div class="challenge"><b>AI Waste Management</b><small>Municipal Corporation</small><em>Evaluation</em><div class="steps">●—●—○—○</div></div>
+        <div class="challenge"><b>Predictive Bus Maintenance</b><small>Transport Department</small><em>Applications</em><div class="steps">●—○—○—○</div></div>
+      </div>
+    </section>
+    <section class="panel"><div class="panel-head"><h2>Recent Activity</h2></div><div class="activity"><p>🟢 New startup applied for Smart Water Challenge</p><p>🔵 Pilot evaluation completed</p><p>🟣 New challenge published</p><p>🟠 Payment milestone updated</p></div></section>
+  </div>
+</main></div>
+{% endblock %}

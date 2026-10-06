@@ -1,0 +1,19 @@
+{% extends 'base.html' %}{% block body %}
+<div class="auth-wrap">
+  <div class="auth-brand"><span class="logo">✦</span><b>Innovate2Procure</b><small>From Ideas to Impact</small></div>
+  <div class="auth-card">
+    <span class="eyebrow">ACCESS PLATFORM</span>
+    <h1>Welcome to Innovate2Procure</h1>
+    <p>Enter your details to access the workspace.</p>
+    {% if error %}<div class="error">{{error}}</div>{% endif %}
+    <form method="post">
+      <label>Full Name<input name="name" required placeholder="Enter your name"></label>
+      <label>Email<input name="email" type="email" required placeholder="name@example.com"></label>
+      <label>Department / Organisation<input name="department" required placeholder="e.g. Water Resources Department"></label>
+      <label>Access type<select name="role"><option value="department">Government / Department</option><option value="startup">Startup</option><option value="host">Host / Admin</option></select></label>
+      <button class="btn primary full" type="submit">Continue to Platform →</button>
+    </form>
+    <p class="tiny">Prototype: submitted details are stored in the local SQLite database and can be viewed by the Host dashboard.</p>
+  </div>
+</div>
+{% endblock %}

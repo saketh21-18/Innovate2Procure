@@ -1,0 +1,56 @@
+{% extends 'base.html' %}{% block body %}
+<nav class="nav">
+  <div class="brand"><span class="logo">✦</span><div><b>Innovate2Procure</b><small>From Ideas to Impact</small></div></div>
+  <div class="links"><a href="#how">How it works</a><a href="#challenges">Challenges</a><a href="#platform">Platform</a><a href="#about">About</a></div>
+  <div><a class="btn ghost" href="{{url_for('login')}}">Login</a><a class="btn primary" href="{{url_for('login')}}">Get Started →</a></div>
+</nav>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">INNOVATION PROCUREMENT PLATFORM</span>
+    <h1>From Government Problems<br>to <span>Startup Solutions</span></h1>
+    <p>A structured, transparent pathway for government departments to discover, evaluate, pilot and scale innovative startup solutions.</p>
+    <div class="actions"><a class="btn primary big" href="{{url_for('login')}}">Explore Platform →</a><a class="btn ghost big" href="#how">How it works</a></div>
+  </div>
+  <div class="hero-card"><div class="map-orb">✦</div><div class="flow"><b>Government</b><span>↓</span><b>Innovate2Procure</b><span>↓</span><b>Startup</b></div></div>
+</section>
+
+<section class="stats">
+  <div><b>13</b><span>Interview Responses</span></div>
+  <div><b>7/13</b><span>Vendor Discovery & Evaluation Difficulty</span></div>
+  <div><b>6</b><span>Core Workflow Stages</span></div>
+  <div><b>1</b><span>Evidence-Based Pathway</span></div>
+</section>
+
+<section id="how" class="section">
+  <div class="section-head"><span class="eyebrow">HOW IT WORKS</span><h2>One pathway from problem to scale</h2></div>
+  <div class="pipeline">
+    <div><i>01</i><b>Define</b><span>Create outcome-based challenge</span></div>
+    <div><i>02</i><b>Discover</b><span>Find and match startups</span></div>
+    <div><i>03</i><b>Evaluate</b><span>Score technical fit and risk</span></div>
+    <div><i>04</i><b>Pilot</b><span>Run a controlled pilot</span></div>
+    <div><i>05</i><b>Prove</b><span>Measure predefined KPIs</span></div>
+    <div><i>06</i><b>Scale</b><span>Procure based on evidence</span></div>
+  </div>
+</section>
+
+<section id="platform" class="dashboard-preview">
+  <div class="preview-side"><span class="eyebrow">BUILT FOR DECISION MAKERS</span><h2>Everything in one innovation workspace</h2><p>Challenges, startup discovery, evaluation, pilots and scale decisions — connected in one workflow.</p><a class="btn primary" href="{{url_for('login')}}">Open Dashboard →</a></div>
+  <div class="mini-dashboard">
+    <div class="mini-top"><b>Welcome back 👋</b><span>Government Department</span></div>
+    <div class="metric-grid">
+      <div><small>Active Challenges</small><strong>05</strong></div>
+      <div><small>Startup Applications</small><strong>42</strong></div>
+      <div><small>Ongoing Pilots</small><strong>03</strong></div>
+      <div><small>Ready for Procurement</small><strong>01</strong></div>
+    </div>
+    <div class="challenge-list">
+      <div><span>Smart Water Leak Detection</span><em>Pilot</em></div>
+      <div><span>AI Waste Management</span><em>Evaluation</em></div>
+      <div><span>Predictive Bus Maintenance</span><em>Applications</em></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="brand"><span class="logo">✦</span><b>Innovate2Procure</b></div><span>From Ideas to Impact</span></footer>
+{% endblock %}
